@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documento PDF</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'FontsPlanni';
+      src: url('../../fonts/MPLUSRounded1c-Regular.woff2') format('woff2');
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'FontsPlanni', Arial, sans-serif;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .wrapper__pdf {
+      padding-bottom: 30px;
+      max-width: 700px;
+      border: 1px solid #eee;
+      border-radius: 20px;
+    }
+
+    .container {
+      padding: 10px 40px;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .container img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .container h1 {
+      margin: 0;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .container svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .information__container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .information__container div {
+      padding: 10px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .information__container p {
+      margin: 0;
+    }
+
+    .information__container span {
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .container .id__pdf {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .container .id__pdf p {
+      text-align: end;
+      font-size: 13px;
+    }
+
+    .inf__turis {
+      margin: 0 30px;
+    }
+
+    .inf__turis .container__inf__turis {
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    .container__inf__turis .info_tick,
+    .info_tick {
+      width: 100%;
+    }
+
+    .container__inf__turis .info_tick h3,
+    .info_tick h3 {
+      margin-left: 20px;
+    }
+
+    .container__inf__turis .info_tick div,
+    .info_tick div {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      border: 1px solid #d33c25;
+      padding: 10px;
+      border-radius: 15px;
+      font-size: 15px;
+    }
+
+    .container__inf__turis .info_tick div i,
+    .info_tick div i {
+      font-size: 30px;
+      margin-right: 8px;
+    }
+
+    .inf__turis fieldset {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid #d33c25;
+      border-radius: 20px;
+    }
+
+    .inf__turis fieldset legend {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+    }
+
+    .price-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .price-container h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .price-container i {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper__pdf">
+    <div class="wrapper__pdf">
+      <div class="container">
+        <img src="https://planni-front-end-one.vercel.app/logo.svg" alt="logo" />
+        <div class="id__pdf">
+          <h1>Package Purchase Confirmation</h1>
+          <div>
+            <p><span style="font-weight: bold">ID</span> {{id_buy_package}}</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 20px 30px; border: 1px solid #d33c25; border-radius: 20px; overflow: hidden;">
+        <div class="information__container">
+          <div style="border-right: 1px solid #d33c25">
+            <span>Nombre</span>
+            <p>{{name_user}} {{lastname_user}}</p>
+          </div>
+          <div>
+            <span>Email</span>
+            <p>{{email}}</p>
+          </div>
+        </div>
+        <div class="information__container" style="border-top: 1px solid #d33c25">
+          <div style="border-right: 1px solid #d33c25">
+            <span>Telefono</span>
+            <p>{{phone}}</p>
+          </div>
+          <div style="border-right: 1px solid #d33c25">
+            <span>Direccion</span>
+            <p>{{address}}</p>
+          </div>
+          <div>
+            <span>Pais</span>
+            <p>{{name_country}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="inf__turis">
+        <div class="container__inf__turis">
+          <div class="info_tick" style="display: inline-block; width: 48%">
+            <h3>Hotel</h3>
+            <div>
+              <i class="bx bxs-hotel" style="color: #d33c25"></i>
+              <span>{{name_hotels}}</span>
+            </div>
+          </div>
+          <div class="info_tick" style="display: inline-block; width: 48%">
+            <h3>Restaurante</h3>
+            <div>
+              <i class="bx bx-restaurant" style="color: #d33c25"></i>
+              <span>{{name_restaurant}}</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Atracciones</legend>
+            <div class="container__inf__turis" style="margin-top: 0px">
+              <div class="info_tick">
+                <div style="margin: 0; border: none">
+                  <i class="bx bxs-arch" style="color: #d33c25"></i>
+                  <span>{{attraction1}}</span>
+                </div>
+              </div>
+              <div class="info_tick">
+                <div style="margin: 0; border: none">
+                  <i class="bx bxs-arch" style="color: #d33c25"></i>
+                  <span>{{attraction2}}</span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="info_tick">
+          <div class="price-container">
+            <h3 style="color: #d33c25">
+              Precio:
+              <span style="color: #000; font-weight: 400">{{price_package}}</span>
+            </h3>
+            <i class="bx bxs-purchase-tag" style="color: #d33c25"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center">
+      <p >
+        Nota
+      <h1>Gracias por su compra</h1>
+      <br>Luego se le enviara información del itinarario de su viaje
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
