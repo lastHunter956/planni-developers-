@@ -1,7 +1,7 @@
 # Planni
 Planni es una plataforma de viajes y metabuscador con inteligencia artificial. Nuestra propuesta de valor es ofrecer paquetes turísticos altamente personalizados, optimizando el proceso de viaje y brindando una experiencia única para cada usuario.
 
-Vsideo demo:
+Video demo:
 [![Alt text](https://github.com/lastHunter956/planni-developers-/blob/main/imagenes/1.jpg)](https://youtu.be/P05XblNAhUY)
 
 ## Diagnóstico e Identificación del problema 
